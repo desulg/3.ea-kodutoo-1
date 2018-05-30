@@ -14,13 +14,13 @@ chrome.browserAction.onClicked.addListener(function() {
 
   chrome.tabs.captureVisibleTab(function(screenshotUrl) {
     var viewTabUrl = chrome.extension.getURL('screenshot.html?id=' + id++)
-    var targetId = null;
+    var picTargetId = null;
 
     chrome.tabs.onUpdated.addListener(function listener(tabId, changedProps) {
       // We are waiting for the tab we opened to finish loading.
       // Check that the tab's id matches the tab we opened,
       // and that the tab is done loading.
-      if (tabId != targetId || changedProps.status != "complete")
+      if (tabId != picTargetId || changedProps.status != "complete")
         return;
 
       // Passing the above test means this is the event we were waiting for.
@@ -43,7 +43,7 @@ chrome.browserAction.onClicked.addListener(function() {
     });
 
     chrome.tabs.create({url: viewTabUrl}, function(tab) {
-      targetId = tab.id;
+      picTargetId = tab.id;
     });
   });
 });
