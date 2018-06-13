@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Best School Ever",
+  "description": "Teen sinu eest parima valiku!",
+  "version": "1.0",
+
+  "icons": {
+    "48": "graduate-cap (1).png"
+  },
+
+  "permissions": [
+    "tabs", "<all_urls>"
+  ],
+
+  "browser_action": {
+    "default_icon": "graduate-cap (1).png",
+    "default_popup": "popup.html"
+  }
+}
