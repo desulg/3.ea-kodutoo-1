@@ -1,5 +1,11 @@
 # 3. kodutöö – Chrome extension
 
+
+
+# <---Töö on valminud minu ja Andre Martovi koostööna--->
+
+
+
 Kodutööna peab looma Chrome extension'i selliselt, et nõuded oleksid täidetud. Soovi korral võib ka teha Firefox'ile.
 
 Kirjeldus ja funktsionaalsus:
